@@ -1766,14 +1766,7 @@ function tenterConnexion() {
     errEl.style.display = 'flex'; return;
   }
 
-  const user = AUTH_USERS.find(u => u.email.toLowerCase() === email && u.password === pw);
-  if (!user) {
-    errMsg.textContent = 'Identifiants incorrects. Vérifiez votre e-mail et mot de passe.';
-    errEl.style.display = 'flex';
-    document.getElementById('auth-pw').value = '';
-    document.getElementById('auth-pw').focus();
-    return;
-  }
+ 
 
   AUTH_USER = user;
   ouvrirSession(user);
