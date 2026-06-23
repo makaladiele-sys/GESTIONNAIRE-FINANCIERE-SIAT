@@ -1968,4 +1968,20 @@ window.supabase = createClient(supabaseUrl, supabaseKey)
 
 console.log("Supabase connecté")
 </script>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-analytics.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCqjG1iINZvhB_I7o4Jpr0Amv1OSoQ",
+  authDomain: "securite-400ff.firebaseapp.com",
+  projectId: "securite-400ff",
+  storageBucket: "securite-400ff.firebasestorage.app",
+  messagingSenderId: "612340460125",
+  appId: "1:612340460125:web:4010d2e6f8e5c6cd01bbb4",
+  measurementId: "G-XE9L7C32R1"
+};
+</script>
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 </body></html>
