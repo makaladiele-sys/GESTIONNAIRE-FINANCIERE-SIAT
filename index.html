@@ -1984,4 +1984,39 @@ const firebaseConfig = {
 </script>
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+import {
+  getAuth,
+  signInWithEmailAndPassword
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCgiXG1LiNVZhB_l7o4bjrPoAmw1v0SoQc",
+  authDomain: "securite-400ff.firebaseapp.com",
+  projectId: "securite-400ff",
+  storageBucket: "securite-400ff.firebasestorage.app",
+  messagingSenderId: "612340460125",
+  appId: "1:612340460125:web:4010d2e6f8e5c6cd01bbb4",
+  measurementId: "G-XE9L7C32R1"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+document.getElementById("auth-login-btn").addEventListener("click", async () => {
+
+    const email = document.getElementById("auth-email").value;
+    const password = document.getElementById("auth-pw").value;
+
+    try {
+        await signInWithEmailAndPassword(auth, email, password);
+
+        alert("Connexion réussie.");
+
+    } catch (error) {
+        alert("Erreur : " + error.message);
+    }
+});
+</script>
 </body></html>
