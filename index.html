@@ -1978,6 +1978,14 @@ document.addEventListener('DOMContentLoaded', () => {
   authInit();
 });
 </script>
+<script type="module">
+import { createClient } from "https://esm.sh/@supabase/supabase-js"
 
+const supabaseUrl = "https://xeerwmpowlcwdfhhbwez.supabase.co"
+const supabaseKey = "TA_NOUVELLE_PUBLISHABLE_KEY"
 
+window.supabase = createClient(supabaseUrl, supabaseKey)
+
+console.log("Supabase connecté")
+</script>
 </body></html>
